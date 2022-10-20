@@ -1,0 +1,78 @@
+<h1 class="text-center"> Gestion des véhicules </h1>
+
+<div class="container">
+    <div class="row">
+            <form (ngSubmit)="saveVehicule()">
+                <div class="form-group">
+                        <label >Matricule
+                        <input type="text" name="matricule" [(ngModel)]="vehicule.matricule"
+                        placeholder="Matricule" class="form-control col-md-12"><br>  
+                </label>
+                </div>
+                <div class="form-group">
+                        <label >Marque
+                        <select name="marque"  [(ngModel)]="vehicule.marque" class="form-control col-md-12">
+                               
+                                <option value="audi" selected >Audi</option>
+                                <option value="bmw">BMW</option>
+                                <option value="chery">Chery</option>
+                                <option value="Citroën">Citroën</option>
+                                <option value="Fiat ">Fiat </option>
+                                <option value="Ford">Ford</option>
+                            </select>
+                        </label>
+                </div>
+
+                <div class="form-group">
+                        <label >Modèle
+                        <select name="modele"  [(ngModel)]="vehicule.modele" class="form-control col-md-12">
+                               
+                                <option value="Boite auto" selected >BoiteAutoumatique</option>
+                                <option value="Boite manuelle">BoiteManuelle</option>
+                              
+                            </select>
+                        </label>
+                </div>
+
+                <div class="form-group">
+                        <label >Couleur
+                        <select name="couleur"  [(ngModel)]="vehicule.couleur" class="form-control col-md-12">
+                               
+                                <option value="silver" selected >Silver</option>
+                                <option value="noire">Noire</option>
+                                <option value="blanche">Blanche</option>
+                                <option value="rouge">Rouge</option>
+                                <option value="miel">Miel</option>
+                              
+                            </select>
+                        </label>
+                </div>
+                <div class="form-group">
+                        <label >Nombre de cheveaux
+                        <textarea type="text" name="nbc" [(ngModel)]="vehicule.nbC"
+                        placeholder="Nombre de cheveaux" class="form-control col-md-12"></textarea>
+                </label>
+                </div>
+
+                <div class="form-group">
+                        <label >Nombre de chassies
+                        <textarea type="text" name="chass" [(ngModel)]="vehicule.chas"
+                        placeholder="Nombre de chassies" class="form-control col-md-12"></textarea>
+                </label>
+                </div>
+              
+                <div class="form-group">
+                        <label >Etat
+                        <select name="etat"  [(ngModel)]="vehicule.etat" class="form-control col-md-12">
+                               
+                                <option value="en marche" selected >EnMarche</option>
+                                <option value="en panne">EnPanne</option>
+                               
+                            </select>
+                        </label>
+                </div>
+                <button type="submit" class="btn btn-primary">Enregistrer</button>
+
+            </form>
+    </div>
+</div>

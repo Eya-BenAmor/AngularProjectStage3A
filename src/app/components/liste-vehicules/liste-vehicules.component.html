@@ -1,0 +1,50 @@
+
+<h1 class="text-center"> Gestion des véhicules </h1>
+
+
+
+ <div class="col-md-4">
+    <input type="text"
+        [(ngModel)]="filters.keyword"
+        name="keyword"
+        (input)="listVehicules()" 
+        class="form-control"
+        placeholder="Filtrer par etat vehicule"/>
+</div>
+<div>
+    <table class = "table table-striped">
+        <thead >
+          <tr>
+            <th>#</th>
+            <th>Matricule</th>
+            <th>Marque</th>
+            <th>Modèle</th>
+            <th>Couleur</th>
+            <th>Nombre de chevaux</th>
+            <th>Nombre de châssis</th>
+            <th>Etat</th>
+            <th></th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor = "let vehicule of vehicules" >
+                <td> </td>
+                <td> {{ vehicule.matricule }} </td>
+                <td> {{ vehicule.modele }} </td>
+                <td> {{ vehicule.marque }} </td>
+                <td> {{ vehicule.couleur }} </td>
+                <td> {{ vehicule.nbC }} </td>
+                <td> {{ vehicule.chas }} </td>
+                <td> {{ vehicule.etat }} </td>
+                <td>
+                    <button (click) = "editvehicule(vehicule.id)" class = "btn btn-info"> Modifier</button>
+                </td>
+                    <td>  
+                <button (click) = "deleteVehicule(vehicule.id)" class = "btn btn-danger" style="margin-left: 10px">Supprimer</button>
+               
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
